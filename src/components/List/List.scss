@@ -1,0 +1,49 @@
+@import '../../styles/core.scss';
+
+
+.ListNoScroll {
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items:flex-start;
+    width : 328px;
+    margin: auto;
+    border: 1px solid #EBEDEE;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #00000026;
+    padding: 4px 0px 4px 0px;
+    background-color: white;
+    position: relative;
+}
+
+.ListNoScroll .content {
+    width: 328px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0px 4px 0px;
+}
+
+.List {
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items:flex-start;
+    width : 328px;
+    max-height: 450px;
+    margin: auto;
+    border: 1px solid #EBEDEE;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px 0px #00000026;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 4px 0px 4px 0px;
+    background-color: white;
+    position: relative;
+}
+
+.List .content {
+    width: 328px;
+    display: flex;
+    flex-direction: column;
+    padding: 4px 0px 4px 0px;
+}

@@ -1,0 +1,87 @@
+@import "../../styles/core.scss";
+
+$color_1: #1C1C1C;
+$color_2: #545766;
+$color_3: #525252;
+$color_4: #141519;
+$border-color_1: #BBBFCC;
+
+.accordion-title {
+	width: 100%;
+	height: fit-content;
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.accordion-subtitle{
+	color: #757474;
+	font-family: $app-font-regular;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-left: 20px;
+	margin-top: -5px;
+	margin-bottom: 25px;
+}
+.accordion-item {
+	margin-top: 1.5rem;
+	border-radius: 0.5rem;
+	width: 100%;
+	border: 0.063rem solid;
+	border-width: 0.063rem;
+	border-color: $border-color_1;
+}
+.title-name-head {
+	width:100%;
+	font-size: 1.125rem;
+	font-weight: 600;
+	margin-top: 0.938rem;
+	line-height: 1.875rem;
+	color: $color_1;
+	margin-left: 1rem;
+	font-family: $app-font-regular;
+}
+.dropdown-icon-accordion {
+	margin-top: 0.9rem;
+	margin-right: 1.563rem;
+	height: 1.5rem;
+	width: 1.5rem;
+	color: $color_2;
+}
+.accordion-content {
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 0.2rem;
+}
+
+.single-container {
+	width: 18.391rem;
+	margin-left: 0.6rem;
+	margin-right: 1.125rem;
+	margin-bottom: 1.125rem;
+	position: relative;
+}
+
+.head-accordion {
+	font-family: $app-font-regular;
+	font-weight: 400;
+	font-size: 0.75rem;
+	line-height: 1.125rem;
+	color: $color_3;
+	margin-left: 0.5rem;
+	margin-bottom: 0.2rem;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.body-accordion {
+	font-family: $app-font-regular;
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: $color_4;
+	margin-left: 0.5rem;
+}

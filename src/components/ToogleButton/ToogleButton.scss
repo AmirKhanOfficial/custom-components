@@ -1,0 +1,114 @@
+@import '../../styles/core.scss';
+ 
+$background-color_1: #C6CEFF;
+$background-color_2: #9EA2B3;
+$toogle-color: #475BD8;
+
+.container-toogle {
+    width: 129px;
+    height: 24px;
+    display: flex;
+}
+.textEnable-toogle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #141519;
+    margin-left: 12px;
+    margin-top: -3px;
+    font-family: $app-font-regular;
+}
+.textDisable-toogle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #9EA2B3;
+    margin-left: 12px;
+    margin-top: -3px;
+    font-family: $app-font-regular;
+}
+.label-toogle {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 14px;
+}
+.input-toogle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:checked {
+        + {
+            .enable-toogle {
+                background-color: $background-color_1;
+                &:before {
+                    transform: translateX(20px);
+                    background-color: $background-color_2;
+                    box-shadow: 0.2px 0.2px 1px 0.5px #cac7c7;
+                }
+            }
+            .disable-toogle {
+                background-color: #DCDEE6 ;
+                &:before {
+                    transform: translateX(20px);
+                    background-color: $background-color_2;
+                    box-shadow: -0.2px 0.7px 1px 0.5px #dbd9d9;
+                }
+            }
+        }
+    }
+}
+.enable-toogle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #9EA2B3;
+    transition: 0.3s;
+    border-radius: 14px;
+    &:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: -2px;
+        bottom: -3px;
+        background-color:white;
+        border-radius: 50%;
+        transition: 0.3s;
+        box-shadow: -0.2px 0.7px 1px 0.5px #d3d1d1;
+    }
+}
+strong {
+    position: absolute;
+    left: 100%;
+    width: max-content;
+    height: 100%;
+    line-height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.disable-toogle {
+    &:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: -2px;
+        bottom: -3px;
+        background-color: $background-color_2;
+        border-radius: 50%;
+        transition: 0.3s;
+        box-shadow: -0.2px 0.7px 1px 0.5px #dbd9d9;
+    }
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #DCDEE6;
+    transition: 0.3s;
+    border-radius: 14px;
+}
+

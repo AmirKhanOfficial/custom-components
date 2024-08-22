@@ -1,0 +1,258 @@
+@import './core.scss';
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+
+  /*  @include media(tablet down) {
+    font-size: 50%;
+  }
+
+  @include media(desktop up) {
+    font-size: 50%;
+  }
+
+  @include media(xlarge up) {
+    font-size: 62.5%;
+  } */
+
+  @include media(large down) {
+    font-size: 50%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: $app-font-regular;
+  background-color: $app-bg-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+  color: $app-text-primary;
+}
+
+a {
+  text-decoration: none;
+}
+
+/** Typography **/
+
+p {
+  margin: 0;
+  padding: 1rem 0;
+  color: $app-text-primary;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-family: $app-font-bold;
+  color: $app-color-h1;
+
+  &.page-title {
+    margin: 0;
+    padding: 3rem 2rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: $app-font-bold;
+  color: $app-color-h2;
+}
+
+/** Buttons **/
+
+button {
+  background: transparent;
+
+  &[disabled] {
+    opacity: 0.6;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+/** Form Elements **/
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: relative;
+  left: -99999px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid $app-color-border;
+    border-radius: 2px;
+    position: absolute;
+    top: -3px;
+    left: 99999px;
+
+    @include media(large down) {
+      top: 0;
+    }
+  }
+
+  &:checked {
+    &:after {
+      border: 1px solid $brand-color-primary;
+      background: url('~assets/images/icon-tick.svg') no-repeat center;
+      background-size: 70%;
+    }
+  }
+}
+
+/* input {
+  border-radius: 4px;
+  border: 1px solid $app-color-border;
+
+  &.brand-input {
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid $brand-color-primary;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 1rem;
+    color: $brand-color-primary;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  border-radius: 4px;
+  border: 1px solid $app-color-border;
+
+  &.brand-textarea {
+    padding: 0.25rem 0.5rem;
+    border: 2px solid $brand-color-primary;
+    color: $brand-color-primary;
+
+    &:focus {
+      outline: none;
+    }
+  }
+} */
+
+/** Commonly-used styles **/
+
+a,
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+  cursor: pointer;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.relative {
+  position: relative;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/** Containers **/
+
+.app-container {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  @include media(tablet down) {
+    padding: 0 1.5rem;
+  }
+}
+
+.layout-container {
+  display: flex;
+  color: $app-text-primary;
+
+  .page-container {
+    flex: 1;
+    position: relative;
+    background: $app-bg-container;
+    overflow-y: scroll;
+    height: 100vh;
+    margin-left: 6rem;
+  }
+}
+
+/** React-Select custom styles **/
+// Using deep linking to override third party classes of select component
+.select {
+  & &__control {
+    border-color: $brand-color-primary;
+    min-height: 32px !important;
+  }
+  & &__indicator-separator {
+    display: none;
+  }
+
+  & &__indicator {
+    padding: 4px 8px;
+  }
+
+  & &__input {
+    display: none; // to remove a dash in front of placeholder text
+  }
+  & &__single-value {
+    color: $brand-color-primary;
+  }
+
+  & &__menu {
+    z-index: 100;
+  }
+}
+
+/* Custom Toastr styling */
+.redux-toastr .toastr.rrt-success {
+  background-color: $brand-color-secondary;
+}
+
+.redux-toastr .toastr.rrt-success .rrt-progressbar {
+  background-color: darken($brand-color-secondary, 10%);
+}
+
+.redux-toastr .toastr.rrt-error {
+  background-color: $app-color-error;
+}
+
+.redux-toastr .toastr.rrt-error .rrt-progressbar {
+  background-color: darken($app-color-error, 10%);
+}
+
+.redux-toastr .toastr.rrt-info {
+  background-color: lighten($brand-color-primary, 20%);
+}
+
+.redux-toastr .toastr.rrt-info .rrt-progressbar {
+  background-color: $brand-color-primary;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

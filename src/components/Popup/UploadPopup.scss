@@ -1,0 +1,116 @@
+$color_1: #007bff;
+$color_2: #303030;
+$color_3: #475BD8;
+$color_4: #fff;
+$font-family_2: 'Montserrat-Bold';
+$background-color_1: #fff;
+$background-color_2: transparent;
+$background-color_3: white;
+
+.buttons-container {
+	display: flex;
+	gap: 16px;
+	
+}
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+}
+.modal-container_1{
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+ }
+ .modal-container_1.open {
+    opacity: 0.5;
+    visibility: visible;
+	background-color:rgba(0, 0, 0, 0.25);
+  }
+
+.modal_1 {
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	background:white;
+	width: 400px;
+	z-index: 4;
+
+}
+.icon_box_1 {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 30%;
+}
+#drop-area {
+	width: 70%;
+	height: 200px;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	font-size: 14px;
+}
+p.upload-text {
+	.span_text { font-weight: bold !important;
+	color: $color_1 !important;
+	}
+} 
+p.file-name {
+	font-family: 'Montserrat-Bold';
+}
+.modal-content_1 {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+	padding: 2px;
+}
+.modal-footer {
+	display: flex;
+	align-self: flex-end;
+}
+
+.cancel-button {
+	display: flex;
+	height: 48px;
+	padding: 13px 44px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	flex: 1 0 0;
+	border-radius: 8px;
+	border: 1px solid #475BD8;
+	color: $color_3;
+	font-family: $font-family_2;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%;
+	background-color: $background-color_1;
+	margin-right: 5px;
+}
+.upload-button {
+	display: flex;
+	height: 48px;
+	padding: 13px 44px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	flex: 1 0 0;
+	border-radius: 8px;
+	border: 1px solid #475BD8;
+	background: #475BD8;
+	color: $color_4;
+	font-family: $font-family_2;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 150%;
+	margin-left: 5px;
+}

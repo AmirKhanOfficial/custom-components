@@ -1,0 +1,55 @@
+$brand-color-primary: #475BD8;
+$brand-color-secondary: #0961ad;
+
+$app-text-primary: #424242;
+$app-text-secondary: #262b35;
+$app-text-tertiary: #686868;
+$app-text-white: #fff;
+$app-text-black: $app-text-primary;
+
+$app-disable-button: #DADBE2;
+//primary button colors
+$primary-button-color: #475BD8;
+$primary-button-hover: #6477F0;
+$primary-button-text-color: #FFF;
+
+//secondary button colors
+$secondary-button-border: #475BD8;
+$secondary-button-border-hover: #6477F0;
+$secondary-button-text-color: #475BD8;
+$secondary-button-text-color-hover: #6477F0;
+
+//link-button-colors
+$link-button-color: #475BD8;
+
+//icon-button-colors
+$search-icon-stroke: #475BD8;
+$search-icon-stroke-hover: #6477F0;
+
+//icon-contained-color
+$icon-contained-color: white;
+$icon-contained-background-color: #475BD8;
+$icon-contained-background-hover-color: #6477F0;
+
+$app-shadow-container: -10px 9px 21px rgba(#8098d5, 0.16);
+$app-shadow-element: 0 0 3px rgba(0, 0, 0, 0.16);
+$app-shadow-container-hover: 0 0 7px 1px #b2c2ca;
+
+$app-color-h1: $app-text-secondary;
+$app-color-h2: $app-text-primary;
+$app-color-border: $app-text-primary;
+$app-color-disabled: #686868;
+$app-color-error: #c11313;
+$app-color-error-light: lighten($app-color-error, 30%);
+
+$app-bg-body: #fafafa;
+$app-bg-container: #fafafa;
+$app-bg-header: #fff;
+$app-bg-side-drawer: $app-text-secondary;
+$app-bg-white: #fff;
+$app-active-row: #fffff9;
+$app-bg-color: #eef0f6;
+$app-border-color: #eeeeee;
+$app-border-color-alt: #ddd;
+
+$container-toolbar-bg: #f9f9f9;

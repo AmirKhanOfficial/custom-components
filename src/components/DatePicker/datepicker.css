@@ -1,0 +1,330 @@
+.custom-date-picker {
+    font-family: Arial, sans-serif;
+    max-width: 350px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+.overlay {
+  /* position: fixed; */
+  /* top: 0;
+  left: 0; */
+  /* width: 100%;
+  height: 100%; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  /* backdrop-filter: blur(5px);  */
+  z-index: 100; 
+}
+
+.caleendericon {
+  position: absolute;
+  top: 0%;
+  right: 3%;
+  padding: 20px 0px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+  
+  .custom-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  
+  .nav-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 6px;
+  }
+  
+  .year-select,
+  .month-select {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: none;
+    outline: none;
+  }
+  
+  .calendar-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weekdays {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    padding: 5px 0;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    font-size: 12px;
+    color: black;
+  }
+  
+  .weekdays div {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    padding: 5px 0;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .empty-day,
+  .day {
+    width: calc(100% / 7);
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .empty-day {
+    background-color: white;
+    color: #ccc;
+  }
+
+  .day {
+    background-color: #fff;
+    color: #344054;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+  
+  .selected {
+    background-color: #475BD8;
+    color: white;
+  }
+  .selecteds {
+    background-color: 475BD8;
+    color: white;
+  }
+  
+  .day:hover {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #EDEFFB;
+    color: #475BD8;
+  }
+  .day.selected{
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #475BD8;
+    border-radius: 50%;
+    color: white;
+  }
+
+.month-select {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .month-select.open {
+    border-color: #007bff;
+  }
+  
+  .month-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 9px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 313px;
+    height: 260px;
+    margin-left: -117px;
+    align-items: center;
+  }
+  
+  .month-option {
+    cursor: pointer;
+    padding: 10px;
+  }
+  .month-option.selected {
+    background-color: #475BD8;
+    border-radius: 20px;
+    color: #fff;
+  }
+
+  .year-select {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-left: 3px;
+    user-select: none;
+  }
+  
+  .year-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    min-width: 120px; /* Adjust the width as needed */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  .year-option {
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+  }
+
+  .year-select {
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .year-select.open {
+    border-color: #007bff; 
+    border-radius: 20px;
+  }
+  
+
+  .year-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 315px;
+    height: 340px;
+    margin-left: -155px;
+    align-items: center;
+    overflow-y: auto;
+  }
+  
+  .year-option {
+    cursor: pointer;
+    padding: 15px;
+  }
+
+  .year-option:hover{
+    background-color: #EDEFFB;
+    color: #475BD8;
+    border-radius: 30px;
+  }
+   .year-option.selected {
+    background-color: #475BD8;
+    color: #fff;
+    border-radius: 30px;
+  }
+ 
+  .month-option:hover{
+    background-color: #EDEFFB;
+    color: #475BD8;
+    border-radius: 20px;
+  }
+  .month-option.selected{
+    background-color: #475BD8;
+    color: white;
+  }
+
+  label {
+    position: relative;
+  }
+  
+  input {
+    border-radius: 4px;
+    padding: 16px;
+    padding-right: 40px;
+    font-size: 16px;
+  }
+  input::placeholder {
+    color: black;
+  }
+  
+  #icon {
+    position: absolute;
+    right: 12px;
+    top: 17px;
+    width: 24px;
+    height: 24px;
+  }
+  
+  
+  .month-year-container {
+    display: flex; 
+    align-items: center; 
+  }
+
+  .year-select,
+  .month-select {
+    font-size: 16px;
+    padding: 5px 3px;
+    border: none;
+    border-radius: none;
+    outline: none;
+  }
+  .year-select:not(.open):hover {
+    color: #475BD8;
+  }
+  
+  .month-select:not(.open):hover {
+    color: #475BD8;
+  }
+
+.datepicker-container {
+  position: relative;
+}
+
+.calendar-container {
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
+
+.future-date {
+  background-color: white;
+  color: grey;
+  cursor: none;
+  /* cursor: crosshair; */
+  pointer-events: none;
+}
+.past-date {
+  background-color: white;
+  color: grey;
+  cursor: none;
+  /* cursor: crosshair; */
+  pointer-events: none;
+}
+.future-dateage {
+  background-color: white;
+  color: grey;
+  cursor: none;
+  /* cursor: crosshair; */
+  pointer-events: none;
+}

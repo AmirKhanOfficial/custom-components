@@ -1,0 +1,44 @@
+@import "../../styles/core.scss";
+
+.Box-Container{
+    display: flex;
+    padding: 0.5rem;
+    height: 104px;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: flex-start;
+    flex: 1 0 0;
+    border: 1px solid #DCDEE6;
+    }
+    
+    .Heading-Div{
+      max-height: 24px;
+      font-size: 1rem;
+      font-family: $app-font-regular;
+      font-weight: 500;
+      line-height: 150%; 
+      display: flex;
+      overflow: hidden;
+    }
+    
+    .Important-Star {
+      color: #E20000;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+    
+    .Button-Div{
+      display:flex;
+      width: 120px;
+      height: 64px;
+      margin-left: 2px;
+      padding: 10px 0px 10px 4px;
+      align-items: center;
+    }
+    
+    .View-Button{
+       margin-right: 29px;
+       margin-bottom:2px
+    }

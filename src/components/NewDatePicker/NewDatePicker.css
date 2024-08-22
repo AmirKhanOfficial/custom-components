@@ -1,0 +1,125 @@
+.new-datepicker-container {
+    position: relative;
+}
+
+.new-calendericon {
+    position: absolute;
+    top: 0%;
+    right: 3%;
+    padding: 20px 0px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.new-overlay {
+    z-index: 100;
+}
+
+.new-year-menu {
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 315px;
+    height: 340px;
+    margin-left: -155px;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.new-year-option {
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.new-month-menu {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 9px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 313px;
+    height: 260px;
+    margin-left: -117px;
+    align-items: center;
+}
+
+.new-month-option {
+    cursor: pointer;
+    padding: 10px;
+    user-select: none;
+    white-space: nowrap;
+}
+
+.new-year-option.disabled {
+    cursor: not-allowed;
+    color: #ccc;
+    /* You can adjust the color to visually indicate it's disabled */
+}
+
+
+.new-month-option.selected {
+    background-color: #475BD8;
+    border-radius: 20px;
+    color: #fff;
+}
+
+
+.new-year-option:hover {
+    background-color: #EDEFFB;
+    color: #475BD8;
+    border-radius: 30px;
+}
+
+.new-year-option.selected {
+    background-color: #475BD8;
+    color: #fff;
+    border-radius: 30px;
+    width: 65px;
+    height: 35px
+}
+
+.new-month-option:hover {
+    background-color: #EDEFFB;
+    color: #475BD8;
+    border-radius: 20px;
+}
+
+.new-month-option.selected {
+    background-color: #475BD8;
+    color: white;
+    width: 70px;
+    height: 40px
+}
+
+label {
+    position: relative;
+}
+
+input {
+    border-radius: 4px;
+    padding: 16px;
+    padding-right: 40px;
+    font-size: 16px;
+}
+
+#icon {
+    position: absolute;
+    right: 12px;
+    top: 17px;
+    width: 24px;
+    height: 24px;
+}
